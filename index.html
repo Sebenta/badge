@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>GR UTAD</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- My Style-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main
+      data-tilt=""
+      data-tilt-glare="true"
+      data-tilt-max-glare="0.1"
+      data-tilt-speed="400"
+      data-tilt-scale="1.02"
+      data-tilt-max="10"
+      data-tilt-perspective="500"
+      style="
+        transform: perspective(500px) rotateX(0deg) rotateY(0deg)
+          scale3d(1, 1, 1);
+        will-change: transform;
+      "
+    >
+      <div class="strip">
+        <img src="images/strip.svg" alt="" srcset="" />
+        <div class="bar"></div>
+      </div>
+      
+      <div class="container">
+        <div class="avatar">
+          <span>
+            <img
+              src="images/build.png"
+              alt="Club Stamp"
+              class="
+                animate__animated
+                animate__bounceIn
+                animate__infinite
+                animate__slower
+              "
+            />
+          </span>
+
+          <img
+            src="https://lorempixel.com/185/185/"
+            alt="Member Avatar"
+            id="userImage"
+          />
+        </div>
+
+        <h1 id="userName">Default Name</h1>
+        <a id="userLink" href="https://github.com/" target="_blank">
+          <img src="images/github.svg" alt="ícone github" />
+          <span id="userLogin">@DefaultUser</span>
+        </a>
+
+        <p id="userBio">Default Bio</p>
+
+        <ul id="socialLinks"></ul>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  </body>
+</html>

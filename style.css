@@ -1,0 +1,162 @@
+:root {
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%);
+}
+
+* {
+  margin: 0;
+}
+
+.animate__animated animate__bounce {
+  animation: animate__bounceIn;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #121214;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url(images/background.svg) no-repeat center;
+
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.container {
+  max-width: 15.625rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--grey);
+}
+
+.strip {
+  position: absolute;
+  z-index: 666;
+  top: -8rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: none;
+  visibility: hidden;
+}
+
+.strip .bar {
+  content: '';
+  position: absolute;
+  width: 5rem;
+  height: 15px;
+  bottom: 0rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: hsl(240, 6%, 13%);
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+
+  position: relative;
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  z-index: 1;
+}
+
+.avatar span img {
+  width: 80px;
+  height: 80px;
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1 {
+  font-size: 1.5rem;
+
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--grey);
+  text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  gap: 0.5rem;
+
+  justify-content: center;
+}
+
+@media (min-width: 720px) {
+  body {
+    background: #eb5757; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to bottom,
+      #000000,
+      #eb5757
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      #000000,
+      #eb5757
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  main {
+    width: 22.375rem;
+    height: 33rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(243, 228, 11, 0.411);
+  }
+
+  .avatar {
+    margin: 2.7rem auto 0;
+  }
+
+  .strip {
+    display: block;
+    visibility: visible;
+  }
+}
