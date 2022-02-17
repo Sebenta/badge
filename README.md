@@ -9,7 +9,7 @@
 
 
 <p align="center">
-  <img alt="dev.finances" src=".github/clip.gif" width="50%">
+  <img alt="dev.finances" src=".github/clip.gif" width="100%">
 </p>
 
 
